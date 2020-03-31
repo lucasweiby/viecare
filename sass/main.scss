@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+//Views
+@import 'views/nav';
+@import 'views/home';
+@import 'views/services';
+@import 'views/about';
+@import 'views/who';
+@import 'views/contact';
+@import 'views/footer';
+
+body {
+    font-family: $bw-surco;
+    overflow-x: hidden;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.hidden-on-mobile {
+    @include mobile {
+        display: none;
+    }
+}

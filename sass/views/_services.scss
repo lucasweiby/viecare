@@ -1,0 +1,31 @@
+.services {
+    .slick-list {
+        padding: 16px 0;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 0 10px rgba($color: $purple, $alpha: 0.2);
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        min-height: 495px;
+
+        &-icon {
+            margin: 0 auto 32px;
+        }
+
+        &-title {
+            color: $green;
+            font-family: $museo;
+            font-weight: 700;
+        }
+
+        &-text {
+            color: #aaa;
+            font-family: $bw-surco;
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+}

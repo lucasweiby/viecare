@@ -1,0 +1,475 @@
+@import url("https://use.typekit.net/kff2zha.css");
+@import url("../assets/fonts/bw-surco/stylesheet.css");
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.header .navbar {
+  width: 100%;
+}
+.header .navbar-logo {
+  width: 64px;
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-toggler {
+    border: 1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-toggler .bar {
+    color: #AE9FCD;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-toggler .close {
+    color: #AE9FCD;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+.header .navbar-toggler .active {
+  top: 50%;
+  left: 50%;
+}
+.header .navbar-nav {
+  margin-left: auto;
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-nav {
+    background-color: #fff;
+    width: 100%;
+    padding: 16px;
+  }
+}
+.header .navbar-nav li {
+  position: relative;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.header .navbar-nav li:not(:last-child) {
+  margin-right: 16px;
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-nav li {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.header .navbar-nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform-origin: center bottom;
+  transform: scaleY(0);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1);
+  z-index: 1;
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-nav li::after {
+    background-color: #AE9FCD;
+  }
+}
+.header .navbar-nav li a {
+  color: #fff !important;
+  position: relative;
+  z-index: 5;
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-nav li a {
+    color: #AE9FCD !important;
+  }
+}
+.header .navbar-nav li:hover::after {
+  transform: scaleY(1);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.header .navbar-nav li:hover a {
+  color: #615679 !important;
+}
+@media screen and (max-width: 480px) {
+  .header .navbar-nav li:hover a {
+    color: #fff !important;
+  }
+}
+
+.home {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-bg-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 480px) {
+  .home-bg-img {
+    width: 300%;
+  }
+}
+.home-img {
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border-bottom-right-radius: 48px;
+}
+@media screen and (max-width: 480px) {
+  .home-img {
+    margin-bottom: 16px;
+  }
+}
+.home-title {
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+  color: #615679;
+  font-size: 56px;
+}
+@media screen and (max-width: 480px) {
+  .home-title {
+    font-size: 28px;
+  }
+}
+.home-text {
+  font-family: "Bw Surco DEMO";
+  line-height: 2;
+  font-weight: 400;
+  color: #615679;
+}
+@media screen and (max-width: 480px) {
+  .home-text {
+    font-size: 14px;
+  }
+}
+.home-link {
+  background-color: #AE9FCD;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(174, 159, 205, 0.2);
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 8px 32px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+.home-link:hover {
+  background-color: #615679;
+  text-decoration: none;
+  color: #fff;
+}
+
+.services .slick-list {
+  padding: 16px 0;
+}
+.services .card {
+  border: none;
+  box-shadow: 0 0 10px rgba(174, 159, 205, 0.2);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  min-height: 495px;
+}
+.services .card-icon {
+  margin: 0 auto 32px;
+}
+.services .card-title {
+  color: #75C6C4;
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+}
+.services .card-text {
+  color: #aaa;
+  font-family: "Bw Surco DEMO";
+  margin: 0;
+  font-weight: 300;
+}
+
+.about {
+  margin-top: 128px;
+  padding: 64px 0;
+  background-color: #AE9FCD;
+}
+.about-title {
+  font-size: 48px;
+  width: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-family: "museo", sans-serif;
+}
+.about-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 70%;
+}
+.about-text {
+  font-family: "Bw Surco DEMO";
+  font-weight: 300;
+  color: #fff;
+}
+.about-link {
+  background-color: #615679;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(97, 86, 121, 0.2);
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 8px 32px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+.about-link:hover {
+  background-color: #615679;
+  text-decoration: none;
+  color: #fff;
+}
+
+.who {
+  padding: 128px 0;
+  background-image: url("../assets/imgs/bg-who.png");
+  background-size: 40% auto;
+  background-repeat: no-repeat;
+  background-position: -25% 50%;
+}
+.who .col-md-4:not(:last-child) {
+  margin-bottom: 80px;
+}
+.who-title {
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #AE9FCD;
+  font-size: 48px;
+}
+.who-text {
+  text-align: center;
+  font-weight: 300;
+  line-height: 2;
+  color: #615679;
+}
+.who .card {
+  padding: 48px 16px 16px;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(174, 159, 205, 0.2);
+  border: none;
+}
+@media screen and (max-width: 480px) {
+  .who .card {
+    text-align: center;
+  }
+}
+.who .card::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #AE9FCD;
+  border-radius: 12px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 0;
+}
+.who .card-icon {
+  border-radius: 50%;
+  width: 110px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgba(174, 159, 205, 0.2);
+  z-index: 2;
+}
+@media screen and (max-width: 480px) {
+  .who .card-icon {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.who .card-title {
+  position: relative;
+  font-family: "museo", sans-serif;
+  color: #615679;
+  font-weight: 700;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+.who .card-subtitle {
+  position: relative;
+  font-weight: 300;
+  font-style: italic;
+  color: #75C6C4;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+.who .card-link {
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #AE9FCD;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+.who .card:hover::after {
+  transform: scaleX(1);
+}
+.who .card:hover .card-link, .who .card:hover .card-subtitle, .who .card:hover .card-title {
+  color: #fff;
+}
+
+.contact {
+  background-color: #75C6C4;
+  height: 400px;
+}
+@media screen and (max-width: 480px) {
+  .contact {
+    height: auto;
+  }
+}
+.contact iframe {
+  width: 100%;
+  height: 400px;
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .contact-right {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.contact-title {
+  font-size: 40px;
+  width: 60%;
+  font-family: "museo", sans-serif;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+}
+.contact-address {
+  color: #4B8381;
+}
+.contact-subtitle {
+  text-transform: uppercase;
+  color: #4B8381;
+  font-family: "museo", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.contact-timing {
+  color: #fff;
+}
+.contact-list {
+  padding: 0;
+  list-style: none;
+}
+.contact-list-link {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.contact-list-link:hover {
+  color: #4B8381;
+  text-decoration: none;
+}
+.contact-list-link i {
+  color: #4B8381;
+}
+
+.footer {
+  padding: 32px 0;
+}
+@media screen and (max-width: 480px) {
+  .footer-logo {
+    display: block;
+    margin: 0 auto 16px;
+  }
+}
+.footer-copy {
+  color: #75C6C4;
+}
+@media screen and (max-width: 480px) {
+  .footer-copy {
+    text-align: center;
+  }
+}
+.footer-author {
+  color: #AE9FCD;
+}
+@media screen and (max-width: 480px) {
+  .footer-author {
+    text-align: center;
+  }
+}
+.footer-author-link {
+  color: #AE9FCD;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.footer-author-link:hover {
+  color: #615679;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Bw Surco DEMO";
+  overflow-x: hidden;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

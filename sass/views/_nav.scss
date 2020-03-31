@@ -1,0 +1,129 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    .navbar {
+        width: 100%;
+
+        &-logo {
+            width: 64px;
+            mix-blend-mode: multiply;
+        }
+
+        &-toggler {
+            @include mobile {
+                border: 1px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .bar {
+                @include mobile {
+                    color: $purple;
+                    position: absolute;
+                    top: 100%;
+                    left: 100%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .close {
+                @include mobile {
+                    color: $purple;
+                    position: absolute;
+                    top: 100%;
+                    left: 100%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .active {
+                top: 50%;
+                left: 50%;
+            }
+        }
+
+        &-nav {
+            margin-left: auto;
+            font-family: $museo;
+            font-weight: 700;
+            color: #fff;
+
+            @include mobile {
+                background-color: #fff;
+                width: 100%;
+                padding: 16px;
+            }
+            
+            li {
+                position: relative;
+                padding-right: 2px;
+                padding-left: 2px;
+
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+
+                @include mobile {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    transform-origin: center bottom;
+                    transform: scaleY(0);
+                    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1);
+                    z-index: 1;
+
+                    @include mobile {
+                        background-color: $purple;
+                    }
+                }
+
+                a {
+                    color: #fff !important;
+                    position: relative;
+                    z-index: 5;
+
+                    @include mobile {
+                        color: $purple !important;
+                    }
+                }
+
+                &:hover {
+                    &::after {
+                        transform: scaleY(1);
+                        border-top-left-radius: 12px;
+                        border-top-right-radius: 12px;
+                        border-bottom-right-radius: 12px;
+                    }
+
+                    a {
+                        color: $darkpurple !important;
+
+                        @include mobile {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
